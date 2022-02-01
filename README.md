@@ -78,3 +78,14 @@ Now our data is good. By applying different ML algorithms, we get RMSE scores as
  go['RMSE']=go.applymap(lambda x: x.mean())
  go.RMSE.sort_values()
 ```
+![image](https://user-images.githubusercontent.com/65950195/151909520-6b7c5135-1df4-43fe-ba8a-4b561b3f1ede.png)
+
+## Conclusion
+As Gradient boosting has less RMSE value, we use this model to predict our test data output
+```bash
+ predict=gb.predict(test_dummy)
+ df=pd.DataFrame({'Item_Outlet_Sales':predict})
+ corr_ans=pd.concat([sample,df],axis=1)
+ del corr_ans['Unnamed: 0']
+ corr_ans
+```

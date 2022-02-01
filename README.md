@@ -82,10 +82,3 @@ Now our data is good. By applying different ML algorithms, we get RMSE scores as
 
 ## Conclusion
 As Gradient boosting has less RMSE value, we use this model to predict our test data output
-```bash
- predict=gb.predict(test_dummy)
- df=pd.DataFrame({'Item_Outlet_Sales':predict})
- corr_ans=pd.concat([sample,df],axis=1)
- del corr_ans['Unnamed: 0']
- corr_ans
-```

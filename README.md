@@ -72,9 +72,11 @@ Then comes data preprocessing, convert object values into categorical values. Re
 Now our data is good. By applying different ML algorithms, we get RMSE scores as follows
 
 ```bash
- go=pd.DataFrame({'RMSE':[lr_score,lr_score_cross,r_score,r_score_cross,l_score,l_score_cross,en_score,en_score_cross,
-                     sgd_score,sgd_score_cross,svm_score,svm_score_cross,dtr_score,dtr_score_cross,rf_score,rf_score_cross,
-                     ada_score,ada_score_cross,br_score,br_score_cross,gb_score,gb_score_cross]},index=name)
+ go=pd.DataFrame({'RMSE':[lr_score,lr_score_cross,r_score,r_score_cross,l_score
+                 ,l_score_cross,en_score,en_score_cross,sgd_score,sgd_score_cross,
+                 svm_score,svm_score_cross,dtr_score,dtr_score_cross,rf_score,
+                 rf_score_cross,ada_score,ada_score_cross,br_score,br_score_cross
+                 ,gb_score,gb_score_cross]},index=name)
  go['RMSE']=go.applymap(lambda x: x.mean())
  go.RMSE.sort_values()
 ```

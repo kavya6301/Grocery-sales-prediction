@@ -30,11 +30,15 @@ After observing the statistical information and null values, we initially find o
 Then comes data preprocessing, convert object values into categorical values. Removing null values and reducing complex data into simpler form. 
 
 ```bash
+ #Plotting and Binning the data
  fig,axes=plt.subplots(1,1,figsize=(10,8))
  sns.scatterplot(x='Item_MRP',y='Item_Outlet_Sales',hue='Item_Fat_Content',size='Item_Weight',data=df)
  plt.plot([69,69],[0,5000])
  plt.plot([137,137],[0,5000])
  plt.plot([203,203],[0,9000])
 ```
-![Screenshot (2259)](https://user-images.githubusercontent.com/65950195/151908448-eb0eddb6-e9c2-4d13-97a4-a00ebb6559ea.png)
+![image](https://user-images.githubusercontent.com/65950195/151908744-d29484ad-0e49-4fba-abd3-7fda77b0f429.png)
 
+```bash
+ data[data.Outlet_Size.isnull()]
+```
